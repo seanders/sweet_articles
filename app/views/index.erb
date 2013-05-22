@@ -1,8 +1,0 @@
-<% @articles.each do |category, articles| %>
-  <h3><%= category %></h3>
-  <ul>
-    <% articles.each do |article| %>
-      <li><a href="<%= article.url %>"><%= article.title %></a></li>
-    <% end %>
-  </ul>
-<% end %>

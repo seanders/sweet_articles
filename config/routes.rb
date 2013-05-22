@@ -1,4 +1,10 @@
 SweetArticles::Application.routes.draw do
+
+    # match "/articles/:month/:day/:year/:title" => redirect("/categories/:category_name/articles/:title")
+    match "/articles/:month/:day/:year/:title" => redirect {|params| "/categories/#{OldArticle.find_by_title(params[:title].titleize.downcase).category.name.parameterize}/articles/#{params[:title].parameterize}" }
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

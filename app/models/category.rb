@@ -1,3 +1,3 @@
 class Category < ActiveRecord::Base
-  belongs_to :old_article
+  has_many :old_article
 end

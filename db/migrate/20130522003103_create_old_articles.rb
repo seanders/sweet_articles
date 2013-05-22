@@ -1,0 +1,13 @@
+class CreateOldArticles < ActiveRecord::Migration
+  def change
+    create_table :old_articles do |t|
+      t.string :title
+      t.text   :description
+      t.string :url
+      t.string :category
+      t.string :tags
+
+      t.timestamps
+    end
+  end
+end
